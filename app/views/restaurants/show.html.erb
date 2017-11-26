@@ -1,24 +1,18 @@
-<p id="notice"><%= notice %></p>
-
+<h2><%= @restaurant.name %></h2>
+<p><%= @restaurant.adresse %></p>
 <p>
-  <strong>Name:</strong>
-  <%= @restaurant.name %>
+<%= @estaurant.stars.times do %>
+<i classe ="fa fa-stars"></i>
+<% end %>
 </p>
-
-<p>
-  <strong>Address:</strong>
-  <%= @restaurant.address %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @restaurant.description %>
-</p>
-
-<p>
-  <strong>Stars:</strong>
-  <%= @restaurant.stars %>
-</p>
-
+<ul>
+<%= @restaurant.reviews.each do %>
+<li>
+<%= review.content %>
+(<%= review.rating.times do %>
+<i classe ="fa fa-stars"></i>
+<% end %>)
+</li>
+<% end %>
 <%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
 <%= link_to 'Back', restaurants_path %>

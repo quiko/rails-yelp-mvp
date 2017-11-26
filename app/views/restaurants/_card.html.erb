@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4">
+
+     <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+       <div class="card-category">
+        <p>
+        <%= restaurant.stars.times do %>
+        <i class="fa fa-star"></i>
+        <% end %>
+        </p>
+       </div>
+     <div class="card-description">
+       <h2><%= restaurant.name %></h2>
+       <p>restaurant.adresse</p>
+     </div>
+
+    <%= link_to "", restaurant_path(restaurant), class: "card_link" %>
+  </div>
+</div>
+
